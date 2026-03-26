@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bjsql7wpdkoaj"]
+
+[ext_resource type="Texture2D" uid="uid://imans2a52pg7" path="res://placeholders/texture_07.png" id="1_tb3dt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p360p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ucxyu"]
+albedo_color = Color(0.8775797, 0.40804803, 0, 1)
+albedo_texture = ExtResource("1_tb3dt")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_xuniy"]
+material = SubResource("StandardMaterial3D_ucxyu")
+
+[node name="PlaceholderBlockBig" type="StaticBody3D" unique_id=1265198934]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1318607541]
+shape = SubResource("BoxShape3D_p360p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=802986370]
+mesh = SubResource("BoxMesh_xuniy")
