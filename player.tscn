@@ -1,10 +1,16 @@
 [gd_scene format=3 uid="uid://q2klijpc0h10"]
 
 [ext_resource type="Script" uid="uid://ci1ep5kyp77nf" path="res://character_body_3d.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://c7dtx3w8gtvq6" path="res://placeholders/icon.svg" id="2_onrkg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i3pqv"]
+albedo_texture = ExtResource("2_onrkg")
+uv1_scale = Vector3(10, 10, 10)
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_4flbx"]
+material = SubResource("StandardMaterial3D_i3pqv")
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=370080723]
 script = ExtResource("1_4flbx")

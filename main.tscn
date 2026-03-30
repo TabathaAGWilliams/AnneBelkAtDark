@@ -1,29 +1,30 @@
 [gd_scene format=3 uid="uid://bmxdleaxc7db4"]
 
 [ext_resource type="PackedScene" uid="uid://q2klijpc0h10" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://dcs2bnag64uq0" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c31cnyn5da65s" path="res://placeholders/blockBig.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://ds127mk1qyjdw" path="res://roomEnter.tscn" id="2_7mycd"]
+[ext_resource type="PackedScene" uid="uid://dgnlufr5fhpk0" path="res://roomHall.tscn" id="3_272bh"]
 [ext_resource type="PackedScene" uid="uid://bjsql7wpdkoaj" path="res://placeholders/blockSmall.tscn" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://8do6yi6rm0f0" path="res://roomCorner.tscn" id="4_5vw27"]
 [ext_resource type="PackedScene" uid="uid://dgu5d17jq7xsw" path="res://placeholders/mesh.tscn" id="4_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bsy0jjdexikhc" path="res://pond.tscn" id="5_kek77"]
 
 [node name="Node" type="Node" unique_id=129206342]
+script = ExtResource("1_lquwl")
+room_scene1 = ExtResource("2_7mycd")
+room_scene2 = ExtResource("3_272bh")
+room_scene3 = ExtResource("4_5vw27")
+room_scene4 = ExtResource("5_kek77")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=390108840]
-transform = Transform3D(-5.9604645e-08, -0.49999997, -0.8660253, 1, -4.616493e-08, -2.0355365e-08, -3.992751e-09, -0.8660253, 0.50000006, 0, 10, 0)
+transform = Transform3D(0.6830126, 0.56565005, 0.46209687, -0.7071067, 0.35355332, 0.6123726, 0.18301274, -0.74501014, 0.6414565, 0, 10, 0)
 
 [node name="CharacterBody3D" parent="." unique_id=370080723 instance=ExtResource("1_ig7tw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7842515, 2, 0.63663054)
 
-[node name="PlaceholderBlockBig2" parent="." unique_id=1265198934 instance=ExtResource("2_1bvp3")]
+[node name="Spawn" parent="." unique_id=1265198934 instance=ExtResource("2_1bvp3")]
 transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0.5, 0, 0.5)
-
-[node name="PlaceholderBlockBig" parent="." unique_id=451461153 instance=ExtResource("3_lquwl")]
-transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, -3, 2, 4)
-
-[node name="PlaceholderBlockBig3" parent="." unique_id=536302914 instance=ExtResource("2_1bvp3")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3, 5, 4)
-
-[node name="PlaceholderBlockBig4" parent="." unique_id=1434631243 instance=ExtResource("2_1bvp3")]
-transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 4, -3, 5, 4)
 
 [node name="PlaceholderBlockBig5" parent="." unique_id=1873084111 instance=ExtResource("4_7mycd")]
 transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 4, 1.5, -3)
@@ -33,3 +34,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, 3, 1, -3)
 
 [node name="PlaceholderBlockBig7" parent="." unique_id=1981625262 instance=ExtResource("4_7mycd")]
 transform = Transform3D(3, 0, 0, 0, 0.5, 0, 0, 0, 1, 6, 3.25, -3)
+
+[node name="Tree" type="Node3D" parent="." unique_id=55274041]
+
+[node name="PlaceholderBlockBig" parent="Tree" unique_id=451461153 instance=ExtResource("3_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, -2, 2, 3)
+
+[node name="PlaceholderBlockBig3" parent="Tree" unique_id=536302914 instance=ExtResource("2_1bvp3")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2, 5, 3)
+
+[node name="PlaceholderBlockBig4" parent="Tree" unique_id=1434631243 instance=ExtResource("2_1bvp3")]
+transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 4, -2, 5, 3)
