@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dwfpt0jlg4xxq"]
+
+[ext_resource type="Texture2D" uid="uid://csgjf8aan5a3w" path="res://placeholders/texture_11.png" id="1_6xoxv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_esicf"]
+albedo_color = Color(0.05490196, 0.65882355, 1, 1)
+albedo_texture = ExtResource("1_6xoxv")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_xuniy"]
+material = SubResource("StandardMaterial3D_esicf")
+
+[node name="PlaceholderBlockBig" type="StaticBody3D" unique_id=1265198934]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=802986370]
+transparency = 0.4
+mesh = SubResource("BoxMesh_xuniy")

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dgnlufr5fhpk0"]
+
+[ext_resource type="PackedScene" uid="uid://c31cnyn5da65s" path="res://placeholders/blockBig.tscn" id="1_yv86p"]
+[ext_resource type="PackedScene" uid="uid://bjsql7wpdkoaj" path="res://placeholders/blockSmall.tscn" id="2_jjjd7"]
+[ext_resource type="PackedScene" uid="uid://dgu5d17jq7xsw" path="res://placeholders/mesh.tscn" id="3_13e2s"]
+
+[node name="Room" type="Node3D" unique_id=2030278793]
+
+[node name="PlaceholderBlockBig" parent="." unique_id=1265198934 instance=ExtResource("1_yv86p")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="PlaceholderBlockBig4" parent="." unique_id=1931887228 instance=ExtResource("1_yv86p")]
+transform = Transform3D(-4.3711384e-07, 0, -4.9999995, 0, 1, 0, 9.999999, 0, -2.1855692e-07, 0, 6, 0)
+
+[node name="PlaceholderBlockBig2" parent="." unique_id=302175742 instance=ExtResource("2_jjjd7")]
+transform = Transform3D(-4.3711384e-07, 0, 0.99999994, 0, 4.9999995, 0, -10, 0, -4.371139e-08, -4.5, 3, 1.9670125e-07)
+
+[node name="PlaceholderBlockBig3" parent="." unique_id=739510691 instance=ExtResource("2_jjjd7")]
+transform = Transform3D(-4.3711384e-07, 0, 0.99999994, 0, 4.9999995, 0, -10, 0, -4.371139e-08, 4.5, 3, -1.9670125e-07)
+
+[node name="PlaceholderBlockBig5" parent="." unique_id=66027693 instance=ExtResource("3_13e2s")]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 3, -3.5, 2, 2.5)
+
+[node name="PlaceholderBlockBig6" parent="." unique_id=455442706 instance=ExtResource("3_13e2s")]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 3, 3.5, 2, -2.5)
+
+[node name="PlaceholderBlockBig7" parent="." unique_id=1425683984 instance=ExtResource("3_13e2s")]
+transform = Transform3D(-4.371139e-08, 0, -3, 0, 2, 0, 1, 0, -1.3113416e-07, 2.5, 2.5, -1.5)
