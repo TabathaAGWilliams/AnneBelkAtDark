@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://7svsb3k1a2ek"]
+
+[ext_resource type="PackedScene" uid="uid://c31cnyn5da65s" path="res://placeholders/blockBig.tscn" id="1_28mp3"]
+[ext_resource type="Script" uid="uid://bfheqfruqdlkv" path="res://chunks/chunk.gd" id="1_lncsb"]
+[ext_resource type="PackedScene" uid="uid://bjsql7wpdkoaj" path="res://placeholders/blockSmall.tscn" id="2_lncsb"]
+
+[node name="Room" type="Node3D" unique_id=2030278793]
+script = ExtResource("1_lncsb")
+
+[node name="PlaceholderBlockBig" parent="." unique_id=1265198934 instance=ExtResource("1_28mp3")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="PlaceholderBlockBig4" parent="." unique_id=1931887228 instance=ExtResource("1_28mp3")]
+transform = Transform3D(-4.3711384e-07, 0, 4.9999995, 0, 1, 0, -9.999999, 0, -2.1855692e-07, 0, 6, 0)
+
+[node name="PlaceholderBlockBig2" parent="." unique_id=302175742 instance=ExtResource("2_lncsb")]
+transform = Transform3D(-4.3711384e-07, 0, 0.99999994, 0, 4.9999995, 0, -10, 0, -4.371139e-08, -4.5, 3, 1.9670125e-07)
+
+[node name="PlaceholderBlockBig3" parent="." unique_id=739510691 instance=ExtResource("2_lncsb")]
+transform = Transform3D(-4.3711384e-07, 0, 0.99999994, 0, 4.9999995, 0, -10, 0, -4.371139e-08, 4.5, 3, -1.9670125e-07)
+
+[node name="PlaceholderBlockBig5" parent="." unique_id=1190003275 instance=ExtResource("2_lncsb")]
+transform = Transform3D(-4.371139e-08, 0, 3, 0, 5, 0, -1, 0, -1.3113416e-07, 2.5, 3, -4.5)
+
+[node name="PlaceholderBlockBig6" parent="." unique_id=424920002 instance=ExtResource("2_lncsb")]
+transform = Transform3D(-4.371139e-08, 0, 3, 0, 5, 0, -1, 0, -1.3113416e-07, -2.5, 3, -4.5)
