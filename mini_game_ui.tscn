@@ -1,6 +1,15 @@
-[gd_scene format=3 uid="uid://bbbv4ogoc2u1b"]
+[gd_scene format=3 uid="uid://gjo1nediocx1"]
 
 [ext_resource type="Script" uid="uid://bgpowito8poak" path="res://mini_game_ui.gd" id="1_vuav5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuav5"]
+bg_color = Color(0.9610899, 0, 0.04538341, 1)
+border_width_bottom = 4
+border_color = Color(0.59818393, 0.04146868, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="MiniGameUI" type="CanvasLayer" unique_id=920386627]
 script = ExtResource("1_vuav5")
@@ -9,9 +18,13 @@ script = ExtResource("1_vuav5")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 49.0
+offset_right = 14.0
+offset_bottom = 49.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 1, 1, 0.6156863)
+color = Color(1, 1, 1, 0.6509804)
 
 [node name="Panel" type="Panel" parent="." unique_id=1186757617]
 anchors_preset = 8
@@ -40,3 +53,19 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Screen opened successfully!"
+
+[node name="Button" type="Button" parent="Panel" unique_id=460635842]
+custom_minimum_size = Vector2(60, 80)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.97800004
+anchor_right = 1.0
+offset_left = -48.200012
+offset_top = -1.0
+offset_right = 3.0
+offset_bottom = 79.0
+grow_horizontal = 0
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_vuav5")
+text = "X"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

@@ -4,6 +4,7 @@
 
 [node name="RayCast3D" type="RayCast3D" unique_id=1418450754]
 target_position = Vector3(0, 0, -4)
+collision_mask = 3
 script = ExtResource("1_4xdc8")
 
 [node name="Label" type="Label" parent="." unique_id=1574171366]

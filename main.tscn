@@ -3,16 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://q2klijpc0h10" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://dcs2bnag64uq0" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c31cnyn5da65s" path="res://placeholders/blockBig.tscn" id="2_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://ds127mk1qyjdw" path="res://chunks/roomEnter.tscn" id="2_7mycd"]
 [ext_resource type="PackedScene" uid="uid://dgnlufr5fhpk0" path="res://chunks/roomHall.tscn" id="3_272bh"]
 [ext_resource type="PackedScene" uid="uid://bjsql7wpdkoaj" path="res://placeholders/blockSmall.tscn" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://8do6yi6rm0f0" path="res://chunks/roomCorner.tscn" id="4_5vw27"]
 [ext_resource type="PackedScene" uid="uid://dgu5d17jq7xsw" path="res://placeholders/mesh.tscn" id="4_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bsy0jjdexikhc" path="res://chunks/pond.tscn" id="5_kek77"]
+[ext_resource type="PackedScene" uid="uid://qntmetqoq88w" path="res://interactables/mini_game_obj.tscn" id="9_kek77"]
 
 [node name="Node" type="Node" unique_id=129206342]
 script = ExtResource("1_lquwl")
-room_scene1 = ExtResource("2_7mycd")
 room_scene2 = ExtResource("3_272bh")
 room_scene3 = ExtResource("4_5vw27")
 room_scene4 = ExtResource("5_kek77")
@@ -48,3 +47,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, 3, 1, -3)
 
 [node name="PlaceholderBlockBig7" parent="Spawn" unique_id=1981625262 instance=ExtResource("4_7mycd")]
 transform = Transform3D(-1.3113416e-07, 0, -1, 0, 0.5, 0, 3, 0, -4.371139e-08, 5, 3.25, 1.5)
+
+[node name="miniGameObj" parent="." unique_id=2101254527 instance=ExtResource("9_kek77")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
+prompt_message = "play mini game"

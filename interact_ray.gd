@@ -13,8 +13,15 @@ func _process(delta: float) -> void:
 	if is_colliding():
 		var collider = get_collider()
 		
-		print("Colliding with " + collider.name + "...")
-		label.text = "Colliding with " + collider.name + "..."
+		#checking to see if collider is an interactable
+		if collider is Interactable:
+			label.text = collider.prompt_message
+			
+			if Input.is_action_just_pressed("interact"):
+				collider.interact(owner)
+		else: 
+			print("Colliding with " + collider.name + "...")
+			label.text = "Colliding with " + collider.name + "..."
 	else:
 		print("Not colliding...")
 		label.text = ""

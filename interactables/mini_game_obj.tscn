@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://qntmetqoq88w"]
+
+[ext_resource type="Texture2D" uid="uid://imans2a52pg7" path="res://placeholders/texture_07.png" id="1_jpya7"]
+[ext_resource type="Script" uid="uid://dlkewxofip1kj" path="res://interactables/minigame_interactable.gd" id="1_ks34v"]
+[ext_resource type="PackedScene" uid="uid://gjo1nediocx1" path="res://mini_game_ui.tscn" id="2_u6sp0"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ks34v"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u6sp0"]
+albedo_color = Color(1, 0.13725491, 1, 1)
+albedo_texture = ExtResource("1_jpya7")
+
+[sub_resource type="SphereMesh" id="SphereMesh_86wje"]
+material = SubResource("StandardMaterial3D_u6sp0")
+
+[node name="miniGameObj" type="StaticBody3D" unique_id=2101254527]
+collision_layer = 2
+script = ExtResource("1_ks34v")
+minigame_ui_scene = ExtResource("2_u6sp0")
+
+[node name="Ray" type="CollisionShape3D" parent="." unique_id=1895595314]
+shape = SubResource("SphereShape3D_ks34v")
+debug_color = Color(0.6901961, 0.28627452, 1, 0.7529412)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2043700097]
+mesh = SubResource("SphereMesh_86wje")
