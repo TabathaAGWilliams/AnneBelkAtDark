@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://lewxktuywcb"]
+
+[ext_resource type="Script" uid="uid://u2aqwa5vrfl6" path="res://minigames/catching/falling_item.gd" id="1_c55cc"]
+[ext_resource type="Texture2D" uid="uid://brh3vrvdohlt0" path="res://minigames/assests/coin_16.png" id="2_hhsmw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c55cc"]
+
+[node name="FallingItem" type="Area2D" unique_id=580071107]
+script = ExtResource("1_c55cc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=877803464]
+texture = ExtResource("2_hhsmw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=37902829]
+shape = SubResource("CircleShape2D_c55cc")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
