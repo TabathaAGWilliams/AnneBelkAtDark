@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://gjo1nediocx1"]
 
-[ext_resource type="Script" uid="uid://bgpowito8poak" path="res://mini_game_ui.gd" id="1_vuav5"]
+[ext_resource type="Script" uid="uid://bgpowito8poak" path="res://minigames/mini_game_ui.gd" id="1_vuav5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuav5"]
 bg_color = Color(0.9610899, 0, 0.04538341, 1)
@@ -25,6 +25,12 @@ offset_bottom = 49.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0.6509804)
+
+[node name="GameContainer" type="Control" parent="." unique_id=1237873225]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Panel" type="Panel" parent="." unique_id=1186757617]
 anchors_preset = 8
@@ -67,5 +73,9 @@ offset_bottom = 79.0
 grow_horizontal = 0
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_vuav5")
 text = "X"
+
+[node name="Button" type="Button" parent="." unique_id=193164494]
+offset_right = 8.0
+offset_bottom = 8.0
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

@@ -1,4 +1,4 @@
-extends "res://interactables/interactable.gd"
+extends Interactable
 
 @export var minigame_ui_scene: PackedScene
 

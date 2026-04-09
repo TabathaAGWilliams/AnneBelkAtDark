@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://5mea386y5jmh"]
+
+[ext_resource type="Script" uid="uid://dtplym7p88xx6" path="res://minigames/catching/bucket.gd" id="1_bu5cj"]
+[ext_resource type="Script" uid="uid://drwf5fbajf8yr" path="res://minigames/catching/catching_game.gd" id="1_ph4nk"]
+[ext_resource type="Script" uid="uid://uw20atiwf1hu" path="res://minigames/catching/spawner.gd" id="3_fxcpt"]
+
+[node name="CatchingGame" type="Node2D" unique_id=1986655659]
+script = ExtResource("1_ph4nk")
+
+[node name="Bucket" type="CharacterBody2D" parent="." unique_id=1429003814]
+script = ExtResource("1_bu5cj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bucket" unique_id=672543800]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bucket" unique_id=1528433361]
+
+[node name="CatchArea" type="Area2D" parent="Bucket" unique_id=249369909]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bucket/CatchArea" unique_id=1457518225]
+
+[node name="Spawner" type="Node2D" parent="." unique_id=362362666]
+script = ExtResource("3_fxcpt")
+
+[node name="Timer" type="Timer" parent="Spawner" unique_id=1013487300]
+
+[node name="GameTimer" type="Timer" parent="." unique_id=682952908]
+
+[connection signal="area_entered" from="Bucket/CatchArea" to="." method="_on_catch_area_area_entered"]
