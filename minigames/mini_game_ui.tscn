@@ -1,17 +1,10 @@
 [gd_scene format=3 uid="uid://gjo1nediocx1"]
 
 [ext_resource type="Script" uid="uid://bgpowito8poak" path="res://minigames/mini_game_ui.gd" id="1_vuav5"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuav5"]
-bg_color = Color(0.9610899, 0, 0.04538341, 1)
-border_width_bottom = 4
-border_color = Color(0.59818393, 0.04146868, 0, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+[ext_resource type="Texture2D" uid="uid://c62011xc12nvn" path="res://minigames/assests/exitButton.png" id="2_0y1co"]
 
 [node name="MiniGameUI" type="CanvasLayer" unique_id=920386627]
+process_mode = 3
 script = ExtResource("1_vuav5")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=792761470]
@@ -36,55 +29,19 @@ offset_bottom = 236.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="." unique_id=1186757617]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -250.0
-offset_right = 200.0
-offset_bottom = 250.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="Panel" unique_id=2029406472]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -108.0
-offset_top = -11.5
-offset_right = 108.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Screen opened successfully!"
-
-[node name="Button" type="Button" parent="Panel" unique_id=460635842]
-custom_minimum_size = Vector2(60, 80)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.97800004
-anchor_right = 1.0
-offset_left = -48.200012
-offset_top = -1.0
-offset_right = 3.0
-offset_bottom = 79.0
-grow_horizontal = 0
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_vuav5")
-text = "X"
-
 [node name="Button" type="Button" parent="." unique_id=193164494]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -8.0
-offset_bottom = 8.0
+offset_left = -55.0
+offset_top = 1.0
+offset_right = 153.0
+offset_bottom = 209.0
 grow_horizontal = 0
+scale = Vector2(0.25, 0.25)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_type_variation = &"FlatButton"
+icon = ExtResource("2_0y1co")
 
-[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

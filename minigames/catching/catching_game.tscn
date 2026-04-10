@@ -5,35 +5,47 @@
 [ext_resource type="Script" uid="uid://uw20atiwf1hu" path="res://minigames/catching/spawner.gd" id="3_fxcpt"]
 [ext_resource type="Texture2D" uid="uid://cal2dgboippwi" path="res://minigames/assests/paint34114018.png" id="3_ih16p"]
 [ext_resource type="PackedScene" uid="uid://lewxktuywcb" path="res://minigames/catching/falling_item.tscn" id="4_fxcpt"]
+[ext_resource type="Script" uid="uid://ddw5i2eo5y7eh" path="res://minigames/catching/catch_area.gd" id="4_vvetp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ph4nk"]
-size = Vector2(63, 69)
+size = Vector2(102, 89)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvetp"]
+size = Vector2(118, 39.75)
 
 [node name="CatchingGame" type="Node2D" unique_id=1986655659]
+process_mode = 3
 script = ExtResource("1_ph4nk")
 
 [node name="Bucket" type="CharacterBody2D" parent="." unique_id=1429003814]
+process_mode = 3
+position = Vector2(400, 500)
 script = ExtResource("1_bu5cj")
 
 [node name="Sprite2D" type="Sprite2D" parent="Bucket" unique_id=672543800]
-scale = Vector2(2, 2)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("3_ih16p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bucket" unique_id=1528433361]
-position = Vector2(-0.5, -0.5)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_ph4nk")
 
 [node name="CatchArea" type="Area2D" parent="Bucket" unique_id=249369909]
+script = ExtResource("4_vvetp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bucket/CatchArea" unique_id=1457518225]
+position = Vector2(1, -32.125)
+shape = SubResource("RectangleShape2D_vvetp")
 
 [node name="Spawner" type="Node2D" parent="." unique_id=362362666]
+position = Vector2(0, 1)
 script = ExtResource("3_fxcpt")
 item_scene = ExtResource("4_fxcpt")
 
 [node name="Timer" type="Timer" parent="Spawner" unique_id=1013487300]
 
 [node name="GameTimer" type="Timer" parent="." unique_id=682952908]
+wait_time = 1.5
 
-[connection signal="area_entered" from="Bucket/CatchArea" to="." method="_on_catch_area_area_entered"]
+[connection signal="area_entered" from="Bucket/CatchArea" to="Bucket/CatchArea" method="_on_area_entered"]
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

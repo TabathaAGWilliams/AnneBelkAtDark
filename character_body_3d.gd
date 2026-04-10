@@ -53,3 +53,12 @@ func _physics_process(delta: float) -> void:
 	
 	head.rotation_degrees.x = cam_look_rot.x
 	rotation_degrees.y = cam_look_rot.y
+
+
+func disable():
+	set_physics_process(false)
+	set_process_input(false)
+
+func enable():
+	set_physics_process(true)
+	set_process_input(true)

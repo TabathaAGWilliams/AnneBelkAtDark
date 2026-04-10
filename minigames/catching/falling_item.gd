@@ -1,20 +1,18 @@
 extends Area2D
 
-signal caught  # This "shouts" when the item is caught
+signal caught  
 
 @export var fall_speed: float = 300.0
-
+func _ready() -> void:
+	#body_entered.connect(_on_area_entered)
+	process_mode = Node.PROCESS_MODE_ALWAYS
 func _process(delta: float) -> void:
-	# Move downward
 	position.y += fall_speed * delta
 	
-	# If the player misses, delete it when it's off-screen
 	if position.y > 600:
 		queue_free()
 
 func _on_area_entered(area: Area2D) -> void:
-	# This is the logic we discussed earlier!
-	# It checks if the area it hit is the Bucket's "catchArea"
-	if area.name == "catchArea":
+	if area.name == "CatchArea":
 		caught.emit()  # Tell the game we were caught
 		queue_free()   # Disappear
