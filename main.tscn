@@ -19,7 +19,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.215748, 2, 40.13663)
 
 [node name="miniGameObj" parent="." unique_id=2101254527 instance=ExtResource("9_kek77")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
-prompt_message = "play mini game"
+prompt_message = "Press 'e' to play mini game!"
 
 [node name="DunGen" parent="." unique_id=1136227697 instance=ExtResource("7_efxa6")]
 chunks = Array[PackedScene]([ExtResource("7_272bh"), ExtResource("4_4c57u"), ExtResource("7_272bh"), ExtResource("2_5vw27")])
@@ -27,3 +27,4 @@ chunks = Array[PackedScene]([ExtResource("7_272bh"), ExtResource("4_4c57u"), Ext
 [node name="chunk" parent="DunGen" unique_id=2030278793 instance=ExtResource("7_272bh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 40)
 coords = Vector2(4, 4)
+game_to_load = "uid://5mea386y5jmh"
