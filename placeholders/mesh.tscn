@@ -14,6 +14,7 @@ uv1_world_triplanar = true
 material = SubResource("StandardMaterial3D_ubowt")
 
 [node name="PlaceholderBlockBig" type="StaticBody3D" unique_id=1265198934]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1318607541]
 shape = SubResource("BoxShape3D_hnth1")
