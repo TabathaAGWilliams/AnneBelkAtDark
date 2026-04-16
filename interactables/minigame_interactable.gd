@@ -10,7 +10,8 @@ func interact(body):
 		
 		if ui_instance.has_method("launch_game"):
 			ui_instance.launch_game(game_to_load)
-			
+
+		
 		body.disable()
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	else:

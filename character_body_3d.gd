@@ -10,6 +10,7 @@ extends CharacterBody3D
 @onready var head = $Head
 var cam_lock : bool = true 
 var cam_look_rot : Vector2
+var is_frozen = false
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -56,9 +57,11 @@ func _physics_process(delta: float) -> void:
 
 
 func disable():
+	is_frozen = true
 	set_physics_process(false)
 	set_process_input(false)
 
 func enable():
+	is_frozen = false
 	set_physics_process(true)
 	set_process_input(true)
