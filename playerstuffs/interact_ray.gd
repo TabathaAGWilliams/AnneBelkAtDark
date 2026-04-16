@@ -24,8 +24,10 @@ func _process(delta: float) -> void:
 			if Input.is_action_just_pressed("interact"):
 				collider.interact(owner)
 		else: 
-			print("Colliding with " + collider.name + "...")
-			label.text = "Colliding with " + collider.name + "..."
+			#print("Colliding with " + collider.name + "...")
+			#label.text = "Colliding with " + collider.name + "..."
+			
+			label.text = ""
 	else:
-		print("Not colliding...")
+		#print("Not colliding...")
 		label.text = ""

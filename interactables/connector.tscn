@@ -1,23 +1,24 @@
 [gd_scene format=3 uid="uid://dhytc554n8u3m"]
 
-[ext_resource type="Texture2D" uid="uid://csgjf8aan5a3w" path="res://placeholders/texture_11.png" id="1_8rerx"]
+[ext_resource type="Script" uid="uid://lidblq388kop" path="res://interactables/connector.gd" id="1_o3il3"]
+[ext_resource type="Texture2D" uid="uid://csgjf8aan5a3w" path="res://placeholders/texture_11.png" id="2_r0ndu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yney3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ts7s"]
 albedo_color = Color(0.93333334, 0.21960784, 1, 1)
-albedo_texture = ExtResource("1_8rerx")
+albedo_texture = ExtResource("2_r0ndu")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_72qb0"]
 material = SubResource("StandardMaterial3D_1ts7s")
-size = Vector3(1, 2, 2)
 
-[node name="StaticBody3D" type="StaticBody3D" unique_id=983979232]
+[node name="connector" type="StaticBody3D" unique_id=983979232]
+script = ExtResource("1_o3il3")
+prompt_message = "Press [E] to Open Door"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=389261368]
-transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_yney3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1244480359]

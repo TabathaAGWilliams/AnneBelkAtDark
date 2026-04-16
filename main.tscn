@@ -1,54 +1,30 @@
 [gd_scene format=3 uid="uid://bmxdleaxc7db4"]
 
-[ext_resource type="PackedScene" uid="uid://q2klijpc0h10" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://q2klijpc0h10" path="res://playerstuffs/player.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://dcs2bnag64uq0" path="res://main.gd" id="1_lquwl"]
-[ext_resource type="PackedScene" uid="uid://c31cnyn5da65s" path="res://placeholders/blockBig.tscn" id="2_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://dgnlufr5fhpk0" path="res://chunks/roomHall.tscn" id="3_272bh"]
-[ext_resource type="PackedScene" uid="uid://bjsql7wpdkoaj" path="res://placeholders/blockSmall.tscn" id="3_lquwl"]
-[ext_resource type="PackedScene" uid="uid://8do6yi6rm0f0" path="res://chunks/roomCorner.tscn" id="4_5vw27"]
-[ext_resource type="PackedScene" uid="uid://dgu5d17jq7xsw" path="res://placeholders/mesh.tscn" id="4_7mycd"]
-[ext_resource type="PackedScene" uid="uid://bsy0jjdexikhc" path="res://chunks/pond.tscn" id="5_kek77"]
+[ext_resource type="PackedScene" uid="uid://c31cnyn5da65s" path="res://placeholders/blockBig.tscn" id="2_5vw27"]
+[ext_resource type="PackedScene" uid="uid://dgu5d17jq7xsw" path="res://placeholders/mesh.tscn" id="4_4c57u"]
+[ext_resource type="PackedScene" uid="uid://7svsb3k1a2ek" path="res://chunks/chunk.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://d2yvu3sc0mjcv" path="res://dun_gen.tscn" id="7_efxa6"]
 [ext_resource type="PackedScene" uid="uid://qntmetqoq88w" path="res://interactables/mini_game_obj.tscn" id="9_kek77"]
 
 [node name="Node" type="Node" unique_id=129206342]
 script = ExtResource("1_lquwl")
-room_scene2 = ExtResource("3_272bh")
-room_scene3 = ExtResource("4_5vw27")
-room_scene4 = ExtResource("5_kek77")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=390108840]
 transform = Transform3D(0.6830126, 0.56565005, 0.46209687, -0.7071067, 0.35355332, 0.6123726, 0.18301274, -0.74501014, 0.6414565, 0, 10, 0)
 
 [node name="CharacterBody3D" parent="." unique_id=370080723 instance=ExtResource("1_ig7tw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2842512, 2, 0.13663054)
-
-[node name="Spawn" type="Node3D" parent="." unique_id=1427891432]
-
-[node name="Tree" type="Node3D" parent="Spawn" unique_id=55274041]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 2.5)
-
-[node name="PlaceholderBlockBig" parent="Spawn/Tree" unique_id=451461153 instance=ExtResource("3_lquwl")]
-transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 2, 0)
-
-[node name="PlaceholderBlockBig3" parent="Spawn/Tree" unique_id=536302914 instance=ExtResource("2_1bvp3")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 5, 0)
-
-[node name="PlaceholderBlockBig4" parent="Spawn/Tree" unique_id=1434631243 instance=ExtResource("2_1bvp3")]
-transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 4, 0, 5, 0)
-
-[node name="PlaceholderBlockBig" parent="Spawn" unique_id=1265198934 instance=ExtResource("2_1bvp3")]
-transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
-
-[node name="PlaceholderBlockBig5" parent="Spawn" unique_id=1873084111 instance=ExtResource("4_7mycd")]
-transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 4, 1.5, -3)
-
-[node name="PlaceholderBlockBig6" parent="Spawn" unique_id=1918729304 instance=ExtResource("4_7mycd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, 3, 1, -3)
-
-[node name="PlaceholderBlockBig7" parent="Spawn" unique_id=1981625262 instance=ExtResource("4_7mycd")]
-transform = Transform3D(-1.3113416e-07, 0, -1, 0, 0.5, 0, 3, 0, -4.371139e-08, 5, 3.25, 1.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.215748, 2, 40.13663)
 
 [node name="miniGameObj" parent="." unique_id=2101254527 instance=ExtResource("9_kek77")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
 game_to_load = "uid://5mea386y5jmh"
 prompt_message = "Press 'e' to play mini game!"
+
+[node name="DunGen" parent="." unique_id=1136227697 instance=ExtResource("7_efxa6")]
+chunks = Array[PackedScene]([ExtResource("7_272bh"), ExtResource("4_4c57u"), ExtResource("7_272bh"), ExtResource("2_5vw27")])
+
+[node name="chunk" parent="DunGen" unique_id=2030278793 instance=ExtResource("7_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 40)
+coords = Vector2(4, 4)

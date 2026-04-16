@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d2yvu3sc0mjcv"]
+
+[ext_resource type="Script" uid="uid://ctobyrfjb5kmr" path="res://dun_gen.gd" id="1_libak"]
+[ext_resource type="PackedScene" uid="uid://7svsb3k1a2ek" path="res://chunks/chunk.tscn" id="2_f6onv"]
+[ext_resource type="PackedScene" uid="uid://dgu5d17jq7xsw" path="res://placeholders/mesh.tscn" id="3_840sk"]
+[ext_resource type="PackedScene" uid="uid://c31cnyn5da65s" path="res://placeholders/blockBig.tscn" id="3_hyavc"]
+[ext_resource type="PackedScene" uid="uid://dwfpt0jlg4xxq" path="res://placeholders/blockNoCollision.tscn" id="4_qs57o"]
+[ext_resource type="PackedScene" uid="uid://bjsql7wpdkoaj" path="res://placeholders/blockSmall.tscn" id="5_j16aw"]
+
+[node name="DunGen" type="Node3D" unique_id=1136227697]
+script = ExtResource("1_libak")
+room_scene = ExtResource("2_f6onv")
+chunks = Array[PackedScene]([ExtResource("3_hyavc"), ExtResource("4_qs57o"), ExtResource("5_j16aw"), ExtResource("3_840sk")])
