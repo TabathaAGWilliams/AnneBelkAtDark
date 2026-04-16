@@ -1,15 +1,37 @@
 extends Node2D
 
+# Signal to tell mini_game_ui.gd that the game is over
+signal game_finished
 
-# Called when the node enters the scene tree for the first time.
+@export var win_score: int = 10
+var score: int = 0
+
+# References to your specific nodes
+@onready var spawner = $Spawner
+@onready var game_timer = $GameTimer
+@onready var bucket = $Bucket
+
 func _ready() -> void:
-	pass # Replace with function body.
+	process_mode = PROCESS_MODE_ALWAYS
+	score = 0
+	
+	if not game_timer.timeout.is_connected(_on_game_timer_timeout):
+		game_timer.timeout.connect(_on_game_timer_timeout)
 
+	game_timer.start()
+	print("Minigame Started! Goal: ", win_score)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_game_timer_timeout() -> void:
+	spawner.spawn_item(self)
 
+func add_score() -> void:
+	score += 1
+	print("Score: ", score)
 
-func _on_catch_area_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
+	if score >= win_score:
+		complete_game()
+
+func complete_game() -> void:
+	game_timer.stop()
+	print("Minigame Won!")
+	game_finished.emit()
