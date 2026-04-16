@@ -19,6 +19,10 @@ run/main_scene="uid://bmxdleaxc7db4"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://placeholders/icon.svg"
 
+[autoload]
+
+PlayerStats="*uid://bin2lkwrssmbq"
+
 [dotnet]
 
 project/assembly_name="AnneBelkAtDark"

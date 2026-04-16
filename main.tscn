@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dgu5d17jq7xsw" path="res://placeholders/mesh.tscn" id="4_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bsy0jjdexikhc" path="res://chunks/pond.tscn" id="5_kek77"]
 [ext_resource type="PackedScene" uid="uid://qntmetqoq88w" path="res://interactables/mini_game_obj.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://dwrdtol81p51y" path="res://hud.tscn" id="10_4c57u"]
 
 [node name="Node" type="Node" unique_id=129206342]
 script = ExtResource("1_lquwl")
@@ -52,3 +53,5 @@ transform = Transform3D(-1.3113416e-07, 0, -1, 0, 0.5, 0, 3, 0, -4.371139e-08, 5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
 game_to_load = "uid://5mea386y5jmh"
 prompt_message = "Press 'e' to play mini game!"
+
+[node name="HUD" parent="." unique_id=214581377 instance=ExtResource("10_4c57u")]

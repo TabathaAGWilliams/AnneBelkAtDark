@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dwrdtol81p51y"]
+
+[ext_resource type="Script" uid="uid://gtwtk43s1bdq" path="res://hud.gd" id="1_37p78"]
+
+[node name="HUD" type="CanvasLayer" unique_id=214581377]
+script = ExtResource("1_37p78")
+
+[node name="GradeBar" type="ProgressBar" parent="." unique_id=185509584]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -209.5
+offset_right = 209.5
+offset_bottom = 27.0
+grow_horizontal = 2

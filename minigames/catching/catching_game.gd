@@ -29,8 +29,12 @@ func add_score() -> void:
 	print("Score: ", score)
 
 	if score >= win_score:
+		PlayerStats.points_added(10)
 		complete_game()
 
+func _on_minigame_won() -> void:
+	PlayerStats.points_added(10)
+	
 func complete_game() -> void:
 	game_timer.stop()
 	print("Minigame Won!")
