@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bmm6kq35jvh4u"]
+
+[ext_resource type="Script" uid="uid://bfheqfruqdlkv" path="res://chunks/chunk.gd" id="1_j3ssf"]
+[ext_resource type="PackedScene" uid="uid://dhytc554n8u3m" path="res://interactables/connector.tscn" id="2_2m7a2"]
+[ext_resource type="PackedScene" uid="uid://c31cnyn5da65s" path="res://placeholders/blockBig.tscn" id="3_bacs8"]
+[ext_resource type="PackedScene" uid="uid://bjsql7wpdkoaj" path="res://placeholders/blockSmall.tscn" id="4_42a3e"]
+
+[node name="chunk" type="Node3D" unique_id=2030278793 node_paths=PackedStringArray("connections")]
+script = ExtResource("1_j3ssf")
+connections = {
+"back": NodePath("orientation/connector_back"),
+"front": NodePath("orientation/connector_front")
+}
+
+[node name="orientation" type="Node3D" parent="." unique_id=1522950207]
+
+[node name="connector_front" parent="orientation" unique_id=493819536 instance=ExtResource("2_2m7a2")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 0.5, 0, 1.5, -4.5)
+possible_scenes = Dictionary[int, float]({
+1: 1.0,
+3: 1.0
+})
+
+[node name="connector_back" parent="orientation" unique_id=983979232 instance=ExtResource("2_2m7a2")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 0.5, 0, 1.5, 4.5)
+possible_scenes = Dictionary[int, float]({
+1: 1.0,
+3: 1.0
+})
+
+[node name="staticBlocks" type="Node3D" parent="orientation" unique_id=1468298123]
+
+[node name="PlaceholderBlockBig" parent="orientation/staticBlocks" unique_id=1265198934 instance=ExtResource("3_bacs8")]
+transform = Transform3D(9.999999, 0, 0, 0, 1, 0, 0, 0, 9.999999, 0, 0, 0)
+
+[node name="PlaceholderBlockBig4" parent="orientation/staticBlocks" unique_id=1931887228 instance=ExtResource("3_bacs8")]
+transform = Transform3D(-4.3711384e-07, 0, 4.9999995, 0, 1, 0, -9.999999, 0, -2.1855692e-07, 0, 6, 0)
+
+[node name="PlaceholderBlockBig5" parent="orientation/staticBlocks" unique_id=1190003275 instance=ExtResource("4_42a3e")]
+transform = Transform3D(-4.371139e-08, 0, 3, 0, 5, 0, -1, 0, -1.3113416e-07, 2.5, 3, -4.5)
+
+[node name="PlaceholderBlockBig8" parent="orientation/staticBlocks" unique_id=1420566186 instance=ExtResource("4_42a3e")]
+transform = Transform3D(-4.371139e-08, 0, 3, 0, 5, 0, -1, 0, -1.3113416e-07, 2.5, 3, 4.5)
+
+[node name="PlaceholderBlockBig6" parent="orientation/staticBlocks" unique_id=424920002 instance=ExtResource("4_42a3e")]
+transform = Transform3D(-4.371139e-08, 0, 3, 0, 5, 0, -1, 0, -1.3113416e-07, -2.5, 3, -4.5)
+
+[node name="PlaceholderBlockBig7" parent="orientation/staticBlocks" unique_id=1900134946 instance=ExtResource("4_42a3e")]
+transform = Transform3D(-4.371139e-08, 0, 3, 0, 5, 0, -1, 0, -1.3113416e-07, -2.5, 3, 4.5)

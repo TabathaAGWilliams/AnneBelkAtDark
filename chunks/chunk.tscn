@@ -5,24 +5,26 @@
 [ext_resource type="PackedScene" uid="uid://bjsql7wpdkoaj" path="res://placeholders/blockSmall.tscn" id="2_lncsb"]
 [ext_resource type="PackedScene" uid="uid://dhytc554n8u3m" path="res://interactables/connector.tscn" id="4_5kc43"]
 
-[node name="chunk" type="Node3D" unique_id=2030278793]
+[node name="chunk" type="Node3D" unique_id=2030278793 node_paths=PackedStringArray("connections")]
 script = ExtResource("1_lncsb")
+connections = {
+"front": NodePath("orientation/connector_front"),
+"left": NodePath("orientation/connector_left")
+}
 
 [node name="orientation" type="Node3D" parent="." unique_id=1522950207]
 
-[node name="connection2" parent="orientation" unique_id=983979232 instance=ExtResource("4_5kc43")]
+[node name="connector_left" parent="orientation" unique_id=983979232 instance=ExtResource("4_5kc43")]
 transform = Transform3D(0.5, 0, 0, 0, 2, 0, 0, 0, 2, -4.5, 1.5, 0)
-side = "left"
 possible_scenes = Dictionary[int, float]({
 0: 1.0,
 2: 1.0
 })
 
-[node name="connection" parent="orientation" unique_id=493819536 instance=ExtResource("4_5kc43")]
+[node name="connector_front" parent="orientation" unique_id=493819536 instance=ExtResource("4_5kc43")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 0.5, 0, 1.5, -4.5)
-side = "front"
 possible_scenes = Dictionary[int, float]({
-0: 1.0,
+0: 2.0,
 2: 1.0
 })
 
