@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cild6q76kngno"]
+
+[ext_resource type="PackedScene" uid="uid://c31cnyn5da65s" path="res://placeholders/blockBig.tscn" id="1_t5gc7"]
+
+[node name="Spaceinvader" type="Node3D" unique_id=864179569]
+
+[node name="Node3D" type="Node3D" parent="." unique_id=531606978]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 1.75, 6.25)
+
+[node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=1870275321]
+transform = Transform3D(0.9659258, -0.06698732, 0.25000003, 0, 0.9659259, 0.25881913, -0.25881907, -0.25000006, 0.9330127, 2.25, 0, -0.75)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node3D" unique_id=420400521]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25, 0.5, -2.25)
+light_energy = 3.0
+omni_range = 8.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Node3D" unique_id=1506370392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 0.5, -2.25)
+light_energy = 3.0
+omni_range = 8.0
+
+[node name="PlaceholderBlockBig" parent="." unique_id=1265198934 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(3.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.25, 0.75, 0.25)
+
+[node name="PlaceholderBlockBig7" parent="." unique_id=1201815024 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(4.5, 0, 0, 0, 1, 0, 0, 0, 0.5, -6.25, 0.5, -0.25)
+
+[node name="PlaceholderBlockBig2" parent="." unique_id=1271402595 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(1.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.25, 0.75, 0.75)
+
+[node name="PlaceholderBlockBig10" parent="." unique_id=2036213065 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1, -1.25, 0.25)
+
+[node name="PlaceholderBlockBig11" parent="." unique_id=979489426 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, -1.25, 0.25)
+
+[node name="PlaceholderBlockBig5" parent="." unique_id=929267917 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.75, 0.75, 0.75)
+
+[node name="PlaceholderBlockBig12" parent="." unique_id=1876353870 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.25, 1.75, 0.25)
+
+[node name="PlaceholderBlockBig13" parent="." unique_id=2113274462 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.75, 1.75, 0.25)
+
+[node name="PlaceholderBlockBig14" parent="." unique_id=189830945 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.25, 2.25, 0.25)
+
+[node name="PlaceholderBlockBig15" parent="." unique_id=1991793725 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.75, 2.25, 0.25)
+
+[node name="PlaceholderBlockBig8" parent="." unique_id=1882428213 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, -1.75, -0.5, 0.25)
+
+[node name="PlaceholderBlockBig16" parent="." unique_id=1602269062 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -8.75, -0.25, -0.25)
+
+[node name="PlaceholderBlockBig17" parent="." unique_id=79802112 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -3.75, -0.25, -0.25)
+
+[node name="PlaceholderBlockBig9" parent="." unique_id=640177464 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 1.25, -0.5, 0.25)
+
+[node name="PlaceholderBlockBig6" parent="." unique_id=28454944 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 5.75, 0.75, 0.75)
+
+[node name="PlaceholderBlockBig3" parent="." unique_id=1786604685 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(2.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.25, 1.25, 0.75)
+
+[node name="PlaceholderBlockBig4" parent="." unique_id=1462787290 instance=ExtResource("1_t5gc7")]
+transform = Transform3D(3.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 4.25, 0, 0.75)

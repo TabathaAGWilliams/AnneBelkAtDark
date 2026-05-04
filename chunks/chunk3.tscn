@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://b70t1c7a1yr24"]
+
+[ext_resource type="Script" uid="uid://bfheqfruqdlkv" path="res://chunks/chunk.gd" id="1_5sedw"]
+[ext_resource type="PackedScene" uid="uid://dhytc554n8u3m" path="res://interactables/connector.tscn" id="2_54dlr"]
+[ext_resource type="PackedScene" uid="uid://dg05cxupu484o" path="res://placeholders/blockSmall2.tscn" id="3_5sedw"]
+[ext_resource type="PackedScene" uid="uid://c31cnyn5da65s" path="res://placeholders/blockBig.tscn" id="3_hu075"]
+
+[node name="chunk" type="Node3D" unique_id=2030278793 node_paths=PackedStringArray("connections")]
+script = ExtResource("1_5sedw")
+connections = {
+"back": NodePath("orientation/connector_back"),
+"front": NodePath("orientation/connector_front"),
+"left": NodePath("orientation/connector_left"),
+"right": NodePath("orientation/connector_right")
+}
+
+[node name="orientation" type="Node3D" parent="." unique_id=1522950207]
+
+[node name="connector_left" parent="orientation" unique_id=983979232 instance=ExtResource("2_54dlr")]
+transform = Transform3D(0.5, 0, 0, 0, 2, 0, 0, 0, 2, -4.5, 1.5, 0)
+possible_scenes = Dictionary[int, float]({
+1: 1.0,
+3: 1.0
+})
+
+[node name="connector_right" parent="orientation" unique_id=1528307364 instance=ExtResource("2_54dlr")]
+transform = Transform3D(0.5, 0, 0, 0, 2, 0, 0, 0, 2, 4.5, 1.5, 0)
+possible_scenes = Dictionary[int, float]({
+1: 1.0,
+3: 1.0
+})
+
+[node name="connector_front" parent="orientation" unique_id=493819536 instance=ExtResource("2_54dlr")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 0.5, 0, 1.5, -4.5)
+possible_scenes = Dictionary[int, float]({
+0: 2.0,
+2: 1.0
+})
+
+[node name="connector_back" parent="orientation" unique_id=2057241489 instance=ExtResource("2_54dlr")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 0.5, 0, 1.5, 4.5)
+possible_scenes = Dictionary[int, float]({
+0: 2.0,
+2: 1.0
+})
+
+[node name="staticBlocks" type="Node3D" parent="orientation" unique_id=1468298123]
+
+[node name="PlaceholderBlockBig" parent="orientation/staticBlocks" unique_id=1265198934 instance=ExtResource("3_5sedw")]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 1.5, 2, 4.5)
+
+[node name="PlaceholderBlockBig3" parent="orientation/staticBlocks" unique_id=236183422 instance=ExtResource("3_5sedw")]
+transform = Transform3D(2, 0, 0, 0, 3, 0, 0, 0, 1, 4, 2, 1.5)
+
+[node name="PlaceholderBlockBig12" parent="orientation/staticBlocks" unique_id=1964272246 instance=ExtResource("3_5sedw")]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 1, 4, 2.5, -3.5)
+
+[node name="PlaceholderBlockBig28" parent="orientation/staticBlocks" unique_id=802959413 instance=ExtResource("3_5sedw")]
+transform = Transform3D(2, 0, 0, 0, 5, 0, 0, 0, 1, -3, 3, 3.5)
+
+[node name="PlaceholderBlockBig4" parent="orientation/staticBlocks" unique_id=1106659028 instance=ExtResource("3_5sedw")]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 3, 2.5, 2, 3.5)
+
+[node name="PlaceholderBlockBig2" parent="orientation/staticBlocks" unique_id=1288129824 instance=ExtResource("3_5sedw")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="PlaceholderBlockBig5" parent="orientation/staticBlocks" unique_id=250842113 instance=ExtResource("3_hu075")]
+transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 1, 4, 3.75, 1.5)
+
+[node name="PlaceholderBlockBig14" parent="orientation/staticBlocks" unique_id=999267327 instance=ExtResource("3_5sedw")]
+transform = Transform3D(2, 0, 0, 0, 3, 0, 0, 0, 1, 2, 1.75, -4)
+
+[node name="PlaceholderBlockBig15" parent="orientation/staticBlocks" unique_id=924188681 instance=ExtResource("3_hu075")]
+transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 1, 2, 3.5, -4)
+
+[node name="PlaceholderBlockBig13" parent="orientation/staticBlocks" unique_id=919799813 instance=ExtResource("3_hu075")]
+transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 1, 4, 4.75, -3.5)
+
+[node name="PlaceholderBlockBig20" parent="orientation/staticBlocks" unique_id=723880999 instance=ExtResource("3_5sedw")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 1, -3, 2.5, -4.5)
+
+[node name="PlaceholderBlockBig26" parent="orientation/staticBlocks" unique_id=1737593427 instance=ExtResource("3_5sedw")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 1, -3, 2.5, 4.5)
+
+[node name="PlaceholderBlockBig21" parent="orientation/staticBlocks" unique_id=1142034251 instance=ExtResource("3_hu075")]
+transform = Transform3D(4, 0, 0, 0, 0.5, 0, 0, 0, 1, -3, 4.75, -4.5)
+
+[node name="PlaceholderBlockBig7" parent="orientation/staticBlocks" unique_id=2027734458 instance=ExtResource("3_hu075")]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 3, 2.5, 3.75, 3.5)
+
+[node name="PlaceholderBlockBig6" parent="orientation/staticBlocks" unique_id=261723016 instance=ExtResource("3_hu075")]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 1.5, 3.75, 4.5)
+
+[node name="PlaceholderBlockBig16" parent="orientation/staticBlocks" unique_id=269175051 instance=ExtResource("3_5sedw")]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 1.5, 1.75, -4.5)
+
+[node name="PlaceholderBlockBig17" parent="orientation/staticBlocks" unique_id=1771530512 instance=ExtResource("3_hu075")]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 1.5, 3.5, -4.5)
+
+[node name="PlaceholderBlockBig8" parent="orientation/staticBlocks" unique_id=1356243853 instance=ExtResource("3_5sedw")]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 3.5, 3.25, 4.5)
+
+[node name="PlaceholderBlockBig9" parent="orientation/staticBlocks" unique_id=12621117 instance=ExtResource("3_5sedw")]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 3, 4.5, 4, 3.5)
+
+[node name="PlaceholderBlockBig10" parent="orientation/staticBlocks" unique_id=1766566347 instance=ExtResource("3_hu075")]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 3, 4.5, 5.75, 3.5)
+
+[node name="PlaceholderBlockBig18" parent="orientation/staticBlocks" unique_id=578782193 instance=ExtResource("3_5sedw")]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 3, 4.5, 1.25, -2.5)
+
+[node name="PlaceholderBlockBig19" parent="orientation/staticBlocks" unique_id=471785818 instance=ExtResource("3_hu075")]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 3, 4.5, 3, -2.5)
+
+[node name="PlaceholderBlockBig22" parent="orientation/staticBlocks" unique_id=1023974604 instance=ExtResource("3_5sedw")]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 1, -4, 1.5, -3.5)
+
+[node name="PlaceholderBlockBig23" parent="orientation/staticBlocks" unique_id=209042861 instance=ExtResource("3_hu075")]
+transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 1, -4, 3.75, -3.5)
+
+[node name="PlaceholderBlockBig24" parent="orientation/staticBlocks" unique_id=2061847033 instance=ExtResource("3_5sedw")]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 3, -4.5, 1.25, -2.5)
+
+[node name="PlaceholderBlockBig27" parent="orientation/staticBlocks" unique_id=733406831 instance=ExtResource("3_5sedw")]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 3, -4.5, 2, 2.5)
+
+[node name="PlaceholderBlockBig25" parent="orientation/staticBlocks" unique_id=733337800 instance=ExtResource("3_hu075")]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 3, -4.5, 3, -2.5)
+
+[node name="PlaceholderBlockBig11" parent="orientation/staticBlocks" unique_id=912802043 instance=ExtResource("3_hu075")]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 3.5, 5, 4.5)

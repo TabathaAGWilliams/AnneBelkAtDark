@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d2yvu3sc0mjcv"]
+
+[ext_resource type="Script" uid="uid://ctobyrfjb5kmr" path="res://dun_gen.gd" id="1_libak"]
+[ext_resource type="PackedScene" uid="uid://7svsb3k1a2ek" path="res://chunks/chunk.tscn" id="4_ash3f"]
+[ext_resource type="PackedScene" uid="uid://bmm6kq35jvh4u" path="res://chunks/chunk1.tscn" id="4_seycs"]
+
+[node name="DunGen" type="Node3D" unique_id=1136227697]
+script = ExtResource("1_libak")
+chunks = Array[PackedScene]([ExtResource("4_seycs"), ExtResource("4_ash3f"), ExtResource("4_seycs"), ExtResource("4_ash3f")])

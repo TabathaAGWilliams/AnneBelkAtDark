@@ -5,7 +5,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_hnth1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubowt"]
-albedo_color = Color(1, 0.12211644, 0.9986152, 1)
+albedo_color = Color(1, 0, 0, 1)
 albedo_texture = ExtResource("1_yuha3")
 uv1_triplanar = true
 uv1_world_triplanar = true
