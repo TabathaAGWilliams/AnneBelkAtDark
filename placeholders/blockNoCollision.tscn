@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dwfpt0jlg4xxq"]
 
-[ext_resource type="Texture2D" uid="uid://csgjf8aan5a3w" path="res://placeholders/texture_11.png" id="1_6xoxv"]
+[ext_resource type="Texture2D" uid="uid://djvid6007wifw" path="res://placeholders/texture_02.png" id="1_6xoxv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_esicf"]
-albedo_color = Color(0.05490196, 0.65882355, 1, 1)
+albedo_color = Color(0.03137255, 0.60784316, 1, 1)
 albedo_texture = ExtResource("1_6xoxv")
 uv1_triplanar = true
 uv1_world_triplanar = true

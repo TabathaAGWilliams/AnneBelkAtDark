@@ -14,7 +14,7 @@ uv1_world_triplanar = true
 [sub_resource type="BoxMesh" id="BoxMesh_72qb0"]
 material = SubResource("StandardMaterial3D_1ts7s")
 
-[node name="connector" type="StaticBody3D" unique_id=983979232]
+[node name="connector_[side]" type="StaticBody3D" unique_id=983979232]
 script = ExtResource("1_o3il3")
 prompt_message = "Press [E] to Open Door"
 

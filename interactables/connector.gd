@@ -1,8 +1,8 @@
 extends Interactable
 class_name Connector
 
-# "front", "right", "back", "left"
-@export var side : String
+# sides are "front", "right", "back", "left"
+
 # index of scene in array : option's weight
 @export var possible_scenes : Dictionary[int, float] = {}
 
@@ -13,7 +13,7 @@ func interact(body):
 	while not successful:
 		var try_scene : int = weighted_dice()
 		print("Trying scene: %d" % try_scene)
-		successful = chunk.connecter_called(try_scene, side)
+		successful = chunk.connecter_called(try_scene, self)
 	
 	queue_free()
 
