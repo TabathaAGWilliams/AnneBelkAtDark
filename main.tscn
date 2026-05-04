@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b70t1c7a1yr24" path="res://chunks/chunk3.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://d2yvu3sc0mjcv" path="res://dun_gen.tscn" id="7_efxa6"]
 [ext_resource type="PackedScene" uid="uid://qntmetqoq88w" path="res://interactables/mini_game_obj.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://dwrdtol81p51y" path="res://hud.tscn" id="10_4c57u"]
 
 [node name="Node" type="Node" unique_id=129206342]
 script = ExtResource("1_lquwl")
@@ -20,6 +21,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 1, 7.5)
 game_to_load = "uid://5mea386y5jmh"
 prompt_message = "Press 'e' to play mini game!"
 
+[node name="HUD" parent="." unique_id=214581377 instance=ExtResource("10_4c57u")]
 [node name="DunGen" parent="." unique_id=1136227697 instance=ExtResource("7_efxa6")]
 
 [node name="chunk" parent="DunGen" unique_id=836506769 node_paths=PackedStringArray("connections") instance=ExtResource("5_lquwl")]
