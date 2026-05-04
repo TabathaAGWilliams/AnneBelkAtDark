@@ -5,7 +5,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_hnth1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubowt"]
-albedo_color = Color(1, 0.12211644, 0.9986152, 1)
+albedo_color = Color(1, 0, 0, 1)
 albedo_texture = ExtResource("1_yuha3")
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -14,7 +14,6 @@ uv1_world_triplanar = true
 material = SubResource("StandardMaterial3D_ubowt")
 
 [node name="PlaceholderBlockBig" type="StaticBody3D" unique_id=1265198934]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1318607541]
 shape = SubResource("BoxShape3D_hnth1")
