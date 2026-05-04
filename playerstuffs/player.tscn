@@ -22,3 +22,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 [node name="RayCast3D" parent="Head" unique_id=1418450754 instance=ExtResource("3_i3pqv")]
 
 [node name="Eyes" type="Camera3D" parent="Head" unique_id=1101009581]
+current = true

@@ -14,22 +14,27 @@ script = ExtResource("1_lquwl")
 transform = Transform3D(0.6830126, 0.56565005, 0.46209687, -0.7071067, 0.35355332, 0.6123726, 0.18301274, -0.74501014, 0.6414565, 0, 10, 0)
 
 [node name="CharacterBody3D" parent="." unique_id=370080723 instance=ExtResource("1_ig7tw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.715748, 2, 10.136631)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 2, 50)
 
 [node name="miniGameObj" parent="." unique_id=2101254527 instance=ExtResource("9_kek77")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 1, 7.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 1, 47.5)
 game_to_load = "uid://5mea386y5jmh"
 prompt_message = "Press 'e' to play mini game!"
 
 [node name="HUD" parent="." unique_id=214581377 instance=ExtResource("10_4c57u")]
+
 [node name="DunGen" parent="." unique_id=1136227697 instance=ExtResource("7_efxa6")]
+grid_size = 10
 
 [node name="chunk" parent="DunGen" unique_id=836506769 node_paths=PackedStringArray("connections") instance=ExtResource("5_lquwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
-coords = Vector2(1, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 50)
+coords = Vector2(5, 5)
 connections = {
 "back": NodePath("orientation/connector_back"),
 "front": NodePath("orientation/connector_front"),
 "left": NodePath("orientation/connector_left"),
 "right": NodePath("orientation/connector_right")
 }
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1492260254]
+transform = Transform3D(1, 0, 0, 0, 0.25881907, 0.9659258, 0, -0.9659258, 0.25881907, 50, 70, 69.5)

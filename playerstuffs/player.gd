@@ -22,7 +22,9 @@ func _input(event):
 		if !cam_lock: 
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		cam_lock = not cam_lock
-		
+	
+	#if event.is_action_pressed()
+	
 	if event is InputEventMouseMotion:
 		if cam_lock:
 			cam_look_rot.y -= (event.relative.x * cam_sens)
